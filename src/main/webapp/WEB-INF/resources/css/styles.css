@@ -1,0 +1,478 @@
+/*--------------------------------------------------------------*/
+/*Basic setup*/
+/*--------------------------------------------------------------*/
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    background-color: #fff;
+    color:#555555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+/*    this will render our text in a perfect way*/
+    text-rendering: optimizeLegibility;
+    
+}
+/*it will clear float after an elemnt*/
+.clearfix{zoom:1}
+.clearfix:after{
+    content: '.';
+    clear:both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+/*--------------------------------------------------------------*/
+/*Reusable component*/
+/*--------------------------------------------------------------*/
+.row{
+    max-width: 1140px;
+    margin:0 auto 0 auto;
+    
+}
+
+section{
+    padding:80px 0;
+    
+}
+
+/*--------------------------------------------------------------*/
+/*HEADINGS*/
+/*--------------------------------------------------------------*/
+
+
+h1,h2,h3
+{
+    margin-top:0;
+/*    so that our txt will be 40px that is 200% of 20px declared in html*/
+    font-size: 240%;
+/*    do text-transfer to make uppercase text*/
+    text-transform: uppercase;
+    
+   
+   
+}
+h1{
+    margin-top:0;
+    margin-bottom: 20px;
+    color:#fff;
+    font-weight: 300;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+}
+
+h2{
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+h3{
+    font-size: 110%;
+    margin-bottom: 15px;
+    
+    
+}
+/*i want a line after the h2 and before text*/
+/*we use pseudo class 'after' to put some content on website wiht css*/
+h2:after{
+    display: block;
+    height: 2px;
+    background-color:  #e67e22;
+    content:" ";
+    width:100px;
+    margin:0 auto;
+    margin-top: 30px;
+}
+
+
+
+/*-------PARAGRAPH----------*/
+
+.long-copy{
+    line-height: 145%;
+    width:70%;
+/*    because width takes 70% and remaining of 30% should be distrubuted to both side */
+    margin-left: 15%;
+    
+}
+.box{
+    padding:1%;
+}
+
+.box p{
+    line-height: 145%;
+    font-size: 90%;
+}
+
+/*---ICONS------*/
+.icon-big{
+    font-size: 300%;
+    display: block;
+    color: #e67e22;
+    margin-bottom: 10px;
+    
+}
+.icon-small{
+    display: inline-block;
+    width: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #e67e22;
+    font-size: 120%;
+    margin-right: 10px;
+/* sedrets to align text and icons*/
+
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: 5px;
+     
+}
+a:link,
+a:visited{
+    color: #e67e22;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #e67e22;
+    transition: border-bottom 0.2s, color 0.2s;
+    
+}
+
+a:hover,
+a:active{
+    color:#555;
+/*    when we hover on the link the border will be transparent*/
+    border-bottom: 1px solid transparent;
+}
+
+.section-features .long-copy{
+    margin-bottom: 30px;
+} 
+    
+
+/*--------------------------------------------------------------*/
+/*BUTTONS*/
+/*--------------------------------------------------------------*/
+
+.btn:link,
+.btn:visited{
+/*    change inline to inline-block*/
+    display: inline-block;
+/*    top and bottom 10 and left and right 30px*/
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+/*    for round button*/
+    border-radius: 200px;
+/*    when we over over a button then it will not change instantly but over a perios of 2second it iwll change*/
+    transition: background-color 0.2s, border 02s, color 0.2s;
+   
+    
+}
+/*when we hover on the button*/
+
+.btn-full:link,
+.btn-full:visited{
+    background-color: #e67e22; 
+    border:1px solid #e67e22;
+    color: white;
+    margin-right: 15px;
+    
+}
+
+
+.btn-ghost:link,
+.btn-ghost:visited{
+    border:1px solid #e67e22; 
+    color: #e67e22
+}
+
+.btn:hover,
+.btn:active{
+    background-color: #cf6d17;   
+}
+.btn-full:hover,
+.btn-full:active{
+    border:1px solid #cf6d17;   
+}
+
+.btn-ghost:hover,
+.btn-ghost:active{
+    border:1px solid #cf6d17;
+    color: white;
+}
+
+/*--------------------------------------------------------------*/
+/*HEADER*/
+/*--------------------------------------------------------------*/
+
+
+
+
+.logo{
+    height:100px;
+    width:auto;
+    float:left;
+    
+    margin-top: 20px;
+}
+
+.main-nav{
+    float:right;
+    list-style: none;
+    margin-top: 60px;
+    
+}
+
+.main-nav li{
+    display:inline-block;
+    margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited{
+    color:white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border:2px solid transparent;
+    transition: border-bottom 0.2s ;
+    padding:8px 0;
+    
+}
+.main-nav li a:hover,
+.main-nav li a:active{
+    border-bottom:2px solid #e67e22;
+    
+}
+/*--------------------------------------------------------------*/
+/*MEALS*/
+/*--------------------------------------------------------------*/
+.section-meals{
+    padding: 0;
+}
+
+.meals-showcase{
+    
+    list-style: none;
+    width:100%;
+    
+    
+}
+
+.meals-showcase li{
+    display: block;
+/*    want them side-by-sie*/
+    float:left;
+/*    having list with 100% and 4 li elements so each of them has to be 25%*/
+    width:25%;
+    
+    
+}
+
+.meal-photo{
+/*    it has exact width of parents whihc is li*/
+    width: 100%;
+    margin:0;
+/*    when the image is overflow*/
+    overflow: hidden;
+    background-color: black;
+    
+}
+/*when we over the image the image can be zoomout and brighter*/
+.meal-photo img{
+/*    apply opacity to make image darker to do that make background-color to balck*/
+    opacity: 0.7;
+    width:100%;
+    height: auto;
+/*    the image will be 115% big*/
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s;
+    
+    
+}
+
+.meal-photo img:hover{
+    opacity:1;
+/*    it will transform to normal*/
+    transform: scale(1.03);
+    
+    
+}
+
+/*-------HOW IT WORKS-------*/
+
+
+.section-steps{
+background-color: #f4f4f4;
+}
+/*it will select the first of the class the left one*/
+.steps-box:first-child{
+/*    for all inline elements*/
+    text-align: right;
+    padding-right: 3%;
+    margin-top: 30px;
+    
+}
+.app-screen{
+    width: 40%;
+}
+
+.steps-box:last-child{
+    padding-left: 3%;
+    margin-top:70px;
+}
+
+
+.works-step{
+    margin-bottom: 50px;
+    
+}
+/*i want the logo at the bottom of phone so that they are not so clos eot the text*/
+
+.works-step:last-of-type{
+    margin-bottom: 80px;
+}
+/*for round of number elemnt*/
+.works-step div{
+    color:#e67e22;
+    border: 2px solid #e67e22;
+    display: inline-block;
+    border-radius: 50%;
+    height: 55px;
+    width:55px;
+    text-align: center;
+    padding: 5px ;
+    float: left;
+    font-size:150%;
+    margin-right: 25px;
+}
+.btn-app:link,
+.btn-app:visited
+{
+    border:0;
+}
+.btn-app img{
+    height: 50px;
+    width:auto;
+    margin-right: 10px;
+    
+}
+/*-------CITIES-----------*/
+
+.box img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    
+}
+
+.city-feature{
+    margin-bottom: 5px;
+    
+}
+
+/*-------CUSTOMER TESTIMONIALS*/
+
+
+
+blockquote{
+    
+    padding: 2%;
+    font-style: italic;
+    line-height: 145%;
+    position: relative;
+    margin-top: 40px;
+    
+}
+
+blockquote:before{
+    content: "\201C";
+    font-size: 400%;
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+}
+
+cite{
+    font-size: 90%;
+    margin-top: 25px;
+    display: block;
+}
+
+
+cite img{
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+    
+}
+
+/*--------SIGN UP---------*/
+
+.section-plans
+{
+    background-color: #f4f4f4;
+    
+}
+
+.plan-box{
+    background-color: white;
+    border-radius: 5px;
+    width:90%;
+    margin-left: 5%;
+    box-shadow: 0 2px 2px #eaeaea;
+}
+
+.plan-box div{
+    padding: 15px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.plan-box div:first-child{
+    background-color: #fcfcfc;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+/*it will select the last child of div*/
+.plan-box div:last-of-type{
+    text-align: center;
+    border: 0;
+    
+}
+
+.plan-price{
+    font-size:300%;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color: #e67e22;
+}
+/*span is child of .plan-price tag so  */
+.plan-price span{
+    font-size: 30%;
+    font-weight: 300;
+}
+.plan-price-meal{
+    font-size: 80%;
+       
+}
+plan-box ul{
+    list-style: none;
+}
+
+.paln-box ul li{
+    padding: 5px 0;
+    
+    
+}
+
+/*-----FORM---------*/
+
